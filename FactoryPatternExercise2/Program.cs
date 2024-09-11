@@ -1,5 +1,6 @@
 ﻿using FactoryPatternExercise2.Factory;
 using FactoryPatternExercise2.Interfaces;
+using FactoryPatternExercise2.Classes;
 
 namespace FactoryPatternExercise2
 {
@@ -16,7 +17,7 @@ namespace FactoryPatternExercise2
             }
 
             IDataAccess dataAccess = DataAccessFactory.GetDataAccessType(userInput);
-            dataAccess.LoadData();
+            List<Product> productList = dataAccess.LoadData();
             dataAccess.SaveData();
         }
     }

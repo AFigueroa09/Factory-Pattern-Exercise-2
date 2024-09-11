@@ -1,8 +1,10 @@
-﻿namespace FactoryPatternExercise2.Interfaces
+﻿using FactoryPatternExercise2.Classes;
+
+namespace FactoryPatternExercise2.Interfaces
 {
     public interface IDataAccess
     {
-        public abstract void LoadData();
+        public abstract List<Product> LoadData();
         public abstract void SaveData();
     }
 }
